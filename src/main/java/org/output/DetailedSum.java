@@ -32,7 +32,7 @@ public class DetailedSum extends SumDecorator {
             mission.techniques.forEach(t -> System.out.println(" - " + t.name + " (Владелец: " + t.user + ")"));
         }
         if (mission.extraFields != null && !mission.extraFields.isEmpty()) {
-            System.out.println("\n----------- ДОПОЛНИТ. ПАРАМЕТРЫ -----------");
+            System.out.println("\n----------- ДОПОЛНИТ. ПАРАМ. -----------");
             mission.extraFields.forEach((key, value) -> {
                 try {
                     String prettyValue = mapper.writeValueAsString(value);
