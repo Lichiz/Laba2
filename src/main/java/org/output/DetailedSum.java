@@ -18,7 +18,7 @@ public class DetailedSum extends SumDecorator {
     @Override
     public void print() {
         super.print();
-        System.out.println("\n>>> ДЕТАЛИЗАЦИЯ МИССИИ <<<");
+        System.out.println("\n----------- ДЕТАЛИЗАЦИЯ МИССИИ -----------");
 
         if (mission.curse != null) {
             System.out.println("Проклятие: " + mission.curse.name + " (Уровень: " + mission.curse.level + ")");
@@ -32,7 +32,7 @@ public class DetailedSum extends SumDecorator {
             mission.techniques.forEach(t -> System.out.println(" - " + t.name + " (Владелец: " + t.user + ")"));
         }
         if (mission.extraFields != null && !mission.extraFields.isEmpty()) {
-            System.out.println("\n>>> ДОПОЛНИТЕЛЬНЫЕ ПАРАМЕТРЫ (Extra Fields) <<<");
+            System.out.println("\n----------- ДОПОЛНИТЕЛЬНЫЕ ПАРАМЕТРЫ -----------");
             mission.extraFields.forEach((key, value) -> {
                 try {
                     String prettyValue = mapper.writeValueAsString(value);
